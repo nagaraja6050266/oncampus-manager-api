@@ -1,0 +1,21 @@
+{
+    "name": "placement-cell-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@prisma/client": "^5.19.0",
+        "dot-env": "^0.0.1",
+        "express": "^4.19.2",
+        "nodemon": "^3.1.4",
+        "pg": "^8.12.0",
+        "prisma": "^5.19.0"
+    }
+}
