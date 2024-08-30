@@ -12,3 +12,28 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Student {
+  regno       BigInt   @id
+  name        String
+  email       String   @unique
+  phoneNumber BigInt?
+  isPlaced    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Company {
+  code              String       @id
+  name              String
+  poc               String
+  email             String[]
+  phoneNumber       BigInt
+  hiringDepartments Department[] @relation("CompanyDepartments")
+}
+
+model Department {
+  code      String    @id
+  name      String
+  companies Company[] @relation("CompanyDepartments")
+}
